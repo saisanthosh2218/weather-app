@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      #main-div {
+        background: linear-gradient(27deg, teal, rgb(4, 124, 4));
+        filter: blur(0.3px);
+        width: 280px;
+        height: 440px;
+        padding: 8px;
+        position: relative;
+        border-radius: 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      #search-div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #search-div input {
+        background-color: white;
+        border: none;
+        outline: none;
+        border-radius: 6px;
+        padding: 4px 12px;
+        margin: 8px 4px;
+        font-weight: bold;
+        text-transform: capitalize;
+      }
+
+      #search-div button {
+        background-color: transparent;
+        border: none;
+      }
+
+      #search-div button:hover {
+        cursor: pointer;
+        outline: none;
+        border: none;
+      }
+
+      .weather-img {
+        position: relative;
+        text-align: center;
+        font-size: 22px;
+        font-family: sans-serif;
+        margin-top: 18px;
+      }
+
+      .weather-img img,
+      .weather-img p {
+        transition: opacity 0.8s linear;
+        opacity: 0;
+      }
+
+      #enter-text {
+        font-family: cursive;
+        color: white;
+      }
+
+      .factors {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+        display: none;
+      }
+
+      .factors img {
+        margin-right: 10px;
+      }
+
+      .factors .humidity-text {
+        margin-right: 25px;
+        font-size: 20px;
+        font-weight: 600;
+        color: white;
+        font-family: sans-serif;
+      }
+
+      .factors .wind-text {
+        font-size: 20px;
+        font-weight: 600;
+        color: white;
+        font-family: sans-serif;
+      }
+
+      @media only screen and (max-width: 600px) {
+        #main-div {
+          width: 270px;
+          height: 400px;
+        }
+
+        .weather-img {
+          margin-top: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="main-div">
+        <div id="search-div">
+          <label for="name">
+            <img
+              src="./asset/location-pin.png"
+              width="20px"
+              height="20px"
+              alt=""
+            />
+          </label>
+          <input
+            type="text"
+            id="name"
+            autocomplete="off"
+            placeholder="Enter City Name"
+          />
+          <button onclick="output()">
+            <img
+              src="./asset/search-interface-symbol.png"
+              width="20px"
+              height="20px"
+              alt=""
+            />
+          </button>
+        </div>
+        <div class="weather-img">
+          <img class="img-class" src=" " width="120px" height="120px" />
+          <h3 id="enter-text">Please Enter City Name</h3>
+          <p
+            style="color: white; font-weight: bold; font-size: 25px"
+            class="degrees"
+          >
+            0 °C
+          </p>
+          <p
+            style="
+              color: white;
+              font-weight: bold;
+              font-size: 25px;
+              text-transform: capitalize;
+            "
+            class="weather-des"
+          ></p>
+        </div>
+        <div class="factors">
+          <img src="./asset/humidity.png" width="40px" height="40px" alt="" />
+          <p class="humidity-text"></p>
+          <img src="./asset/wind.png" width="40px" height="40px" alt="" />
+          <p class="wind-text"></p>
+        </div>
+      </div>
+    </div>
+    <script src="weather.js"></script>
+  </body>
+</html>
