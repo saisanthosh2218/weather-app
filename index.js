@@ -42,7 +42,21 @@ function output() {
           } else if (data.weather[0].main === "Haze") {
             image[0].src = "./asset/haze.png";
           } else if (data.weather[0].main === "Clear") {
-            image[0].src = "./asset/clouds.png";
+            image[0].src = "./asset/clear-sky.png";
+          } else if (data.weather[0].main === "Drizzle") {
+            image[0].src = "./asset/drizzle.png";
+          } else if (data.weather[0].main === "Snow") {
+            image[0].src = "./asset/snow.png";
+          } else if (data.weather[0].main === "Cold") {
+            image[0].src = "./asset/snow.png";
+          } else if (data.weather[0].main === "Thunderstorm") {
+            image[0].src = "./asset/thunderstorm.png";
+          } else if (data.weather[0].main === "Mist") {
+            image[0].src = "./asset/fog.png";
+          } else if (data.weather[0].main === "Fog") {
+            image[0].src = "./asset/mist.png";
+          } else if (data.weather[0].main === "Smoke") {
+            image[0].src = "./asset/smoke.png";
           } else {
             image[0].src = "";
           }
