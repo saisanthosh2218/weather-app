@@ -10,7 +10,7 @@ Welcome to the Weather App! This is a simple website that allows you to check th
 
 ## Demo
 
-You can access the live demo of the Weather App [here](https://legendary-weather-app-fb07ef.netlify.app/)).
+You can access the live demo of the Weather App [Here](https://legendary-weather-app-fb07ef.netlify.app/).
 
 ## Technologies Used
 
